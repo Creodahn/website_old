@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JustinDrew.net</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="http://www.justindrew.net/support/css/main.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+		<script src="http://www.justindrew.net/support/js/main.js"> </script>
+	</head>
+	
+	<body onresize="//bkgrndResize (document.getElementById('mainPageHeader'), 300, 800);">
+		<div class="bodyDiv">
+			<div class="mainPageHeader" id="mainPageHeader">
+				<div class="mainHeaderText"> Justin Drew </div>
+				<div class="mainHeaderSubText"> Web Developer </div>
+				<div class="headerButtons">
+					<div class="headerButton hvr-sweep-to-bottom" id="home" onclick="headerBtnClick(this);">      Home       </div>
+					<div class="headerButton hvr-sweep-to-bottom" id="resume" onclick="headerBtnClick(this);">    Resume     </div>
+					<div class="headerButton hvr-sweep-to-bottom" id="myWork" onclick="headerBtnClick(this);">    My Work    </div>
+					<div class="headerButton hvr-sweep-to-bottom" id="aboutMe" onclick="headerBtnClick(this);">   About Me   </div>
+					<div class="headerButton hvr-sweep-to-bottom" id="contactMe" onclick="headerBtnClick(this);"> Contact Me </div>
+				</div>
+			</div>
+			<div class="contentDiv" id="contentDiv">
+				<div class="innerContentDiv" id="homeContent" style="margin-top:0px">
+					<p> I'm Justin Drew, a web developer based in up-state New York. </p>
+				</div>
+				<div class="innerContentDiv" id="resumeContent">
+					<div class="resumeSectionHeader" id="education"> Education </div>
+					<div class="resumeSectionContent" id="educationContent">
+						Education content goes here.
+					</div>
+					
+					
+				</div>
+				<div class="innerContentDiv" id="myWorkContent">
+					<div class="sectionButtonContainer" id="myWorkButtons">
+						<div class="headerButtons">
+							<div class="headerButton hvr-sweep-to-bottom" id="municityHelp" onclick="headerBtnClick(this);"> Municity Help </div>
+						</div>
+					</div>
+					<h2> Examples of My Work go Here </h2>
+				</div>
+				<div class="innerContentDiv" id="aboutMeContent">
+					<h2> About Me </h2>
+				</div>
+				<div class="innerContentDiv" id="contactMeContent">
+				</div>
+			</div>
+		</div>
+	</body>
+<html>
