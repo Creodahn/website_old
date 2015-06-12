@@ -1,8 +1,8 @@
 function headerBtnClick (button) {
-	var target = document.getElementById (button.id + "Content");
-	var parent = target.parentNode;
+	var target = $('#' + button.id + "Content").get (0);
+	var parent = $(target.parentNode).get (0);
 	
-	var trueOffset = target.offsetTop - parent.offsetTop;
+	var trueOffset = $(target).prop ('offsetTop') - $(parent).prop('offsetTop');
 	
 	$( "#" +parent.id).animate({scrollTop: trueOffset});
 }
