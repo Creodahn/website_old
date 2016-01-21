@@ -7,46 +7,139 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
 		<script src="support/js/main.js"> </script>
 	</head>
-	
-	<body onresize="//bkgrndResize (document.getElementById('mainPageHeader'), 300, 800);">
-		<div class="bodyDiv">
-			<div class="mainPageHeader" id="mainPageHeader">
-				<div class="mainHeaderText"> Justin Drew </div>
-				<div class="mainHeaderSubText"> Web Developer </div>
-				<div class="headerButtons">
-					<div class="headerButton hvr-sweep-to-bottom" id="home" onclick="headerBtnClick(this);">      Home       </div>
-					<div class="headerButton hvr-sweep-to-bottom" id="resume" onclick="headerBtnClick(this);">    Resume     </div>
-					<div class="headerButton hvr-sweep-to-bottom" id="myWork" onclick="headerBtnClick(this);">    My Work    </div>
-					<div class="headerButton hvr-sweep-to-bottom" id="aboutMe" onclick="headerBtnClick(this);">   About Me   </div>
-					<div class="headerButton hvr-sweep-to-bottom" id="contactMe" onclick="headerBtnClick(this);"> Contact Me </div>
+
+	<body>
+		<div class="container">
+			<div class="header" id="mainPageHeader">
+				<div class="header-text">
+					Justin Drew
 				</div>
+				<div class="header-sub-text">
+					Web Developer
+				</div>
+				<nav class="header-button-container">
+					<button class="header-button hvr-sweep-to-bottom active" id="home">
+						Home
+					</button>
+					<button class="header-button hvr-sweep-to-bottom" id="resume">
+						Resume
+					</button>
+					<button class="header-button hvr-sweep-to-bottom" id="myWork">
+						My Work
+					</button>
+					<button class="header-button hvr-sweep-to-bottom" id="aboutMe">
+						About Me
+					</button>
+					<button class="header-button hvr-sweep-to-bottom" id="contactMe">
+						Contact Me
+					</button>
+				</nav>
 			</div>
-			<div class="contentDiv" id="contentDiv">
-				<div class="innerContentDiv" id="homeContent" style="margin-top:0px">
-					<p> I'm Justin Drew, a web developer based in up-state New York. </p>
-				</div>
-				<div class="innerContentDiv" id="resumeContent">
-					<div class="resumeSectionHeader" id="education"> Education </div>
-					<div class="resumeSectionContent" id="educationContent">
+			<section class="content" id="contentDiv">
+				<article class="inner-content" id="homeContent" style="margin-top:0px">
+					<p>
+						I am a passionate web developer and problem solver with experience working for small,
+				    independently owned companies on tight deadlines. My specialties include SQL, Javascript,
+				    JQuery, Node.js, AJAX, CSS, HTML, back-end development, database development.
+					</p>
+				</article>
+				<article class="inner-content" id="resumeContent">
+					<div class="resume-section-header" id="education">
+						Education
+					</div>
+					<div class="resume-section-content" id="educationContent">
 						Education content goes here.
 					</div>
-					
-					
-				</div>
-				<div class="innerContentDiv" id="myWorkContent">
-					<div class="sectionButtonContainer" id="myWorkButtons">
-						<div class="headerButtons">
-							<div class="headerButton hvr-sweep-to-bottom" id="municityHelp" onclick="headerBtnClick(this);"> Municity Help </div>
+				</article>
+				<article class="inner-content" id="myWorkContent">
+					<nav class="section-button-container" id="myWorkButtons">
+						<div class="header-button-container">
+							<button class="header-button hvr-sweep-to-bottom active" id="municityHelp">
+								Municity Help
+							</button>
+							<button class="header-button hvr-sweep-to-bottom" id="municityHelpCustomerPortal">
+								Municity Help Customer Portal
+							</button>
+							<button class="header-button hvr-sweep-to-bottom" id="municityReports">
+								Municity Reports
+							</button>
 						</div>
-					</div>
-					<h2> Examples of My Work go Here </h2>
-				</div>
-				<div class="innerContentDiv" id="aboutMeContent">
+					</nav>
+					<section class="content" id="myWorkContent_Inner">
+						<article class="inner-content" id="municityHelpContent">
+							<h2> Municity Help </h2>
+							<p> Municity Help is an internal support system that I created for Software Consulting Associates, Inc.</p>
+						</article>
+						<article class="inner-content" id="municityHelpCustomerPortalContent">
+							<h2> Municity Help Customer Portal </h2>
+							<p>
+								Municity Help Customer Portal allows Software Consulting Associates' customers to access software documentation, post to the internal forum, and submit tickets directly into the Municity Help software.
+							</p>
+						</article>
+						<article class="inner-content" id="municityReportsContent">
+							<h2> Municity Reports </h2>
+							<p> Municity Reports is an online reporting solution for Software Consulting Associates' customers that I designed the architecture for </p>
+						</article>
+					</section>
+				</article>
+				<article class="inner-content" id="aboutMeContent">
 					<h2> About Me </h2>
-				</div>
-				<div class="innerContentDiv" id="contactMeContent">
-				</div>
-			</div>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tristique massa. Ut ornare sodales mattis. Fusce rhoncus finibus ligula vitae condimentum. Proin tellus est, consectetur a dictum vel, sodales ac tortor. Etiam ac pharetra risus, nec malesuada felis. Donec cursus lorem et dui sagittis, a bibendum nunc blandit. Nullam interdum tempor orci non consectetur. Morbi sed felis molestie, condimentum massa sit amet, condimentum ligula.
+						<br />
+						<br />
+						Sed blandit vehicula orci, vel convallis metus commodo eu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Vivamus hendrerit ultricies fringilla. Nunc tellus ligula, mollis sed purus id, porttitor blandit tortor. Maecenas et vulputate ipsum, sed vestibulum magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut cursus ac elit a facilisis. Aenean risus lectus, volutpat quis enim ac, efficitur tristique eros. Sed vulputate tincidunt pharetra. Aliquam eu lacinia nibh. Vestibulum et vulputate erat. Sed dictum arcu eget orci porta, id sagittis arcu rutrum. Curabitur sodales risus id massa viverra, eu vehicula nunc ornare. Integer mollis a sem et sagittis.
+						<br />
+						<br />
+						Vivamus suscipit neque a felis laoreet, et lobortis sapien imperdiet. Donec ut nunc ex. Integer venenatis dolor malesuada, eleifend nisl quis, cursus lorem. Donec semper faucibus ligula in mattis. Nullam urna nunc, vehicula sed purus non, pretium consequat nisi. Phasellus ut porta risus, non ullamcorper urna. Sed in felis nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam luctus laoreet lectus, vel lobortis felis. Donec congue non ex a efficitur.
+						<br />
+						<br />
+						In congue, purus vestibulum ullamcorper tempor, mauris elit cursus nulla, at posuere felis felis ac velit. Donec vel dolor odio. Cras convallis porta libero eget accumsan. Duis a dolor felis. Vestibulum ullamcorper venenatis libero sed tempus. Duis consequat laoreet dui, id aliquam sem vulputate ac. Suspendisse commodo auctor lobortis. Vivamus diam sem, interdum id nunc sed, bibendum placerat augue. Phasellus vestibulum enim eu quam lacinia, et vehicula ante gravida. Donec aliquet, quam at blandit accumsan, mauris orci dignissim ligula, vel efficitur mauris ipsum ac est. Ut varius mollis nibh, sit amet porttitor nibh interdum sit amet. Praesent et nisl eros. Cras malesuada dui et felis faucibus, ut scelerisque purus maximus.
+						<br />
+						<br />
+						Nam tincidunt risus et rutrum porttitor. Mauris aliquet eget turpis at egestas. Pellentesque euismod arcu vitae consectetur consectetur. Etiam non sollicitudin massa. Curabitur consequat convallis ipsum, sit amet fringilla tortor pulvinar sit amet. Suspendisse mattis quis ligula nec posuere. Vestibulum mollis, enim non porta fermentum, ligula mauris viverra urna, eget luctus tellus augue in magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur ut augue ac diam maximus volutpat. Nam fermentum mi ligula, nec accumsan dolor congue ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis sodales eros non lectus consequat tincidunt. Vestibulum quis tellus nulla.
+						<br />
+						<br />
+						Phasellus non eros arcu. Nulla in lectus fermentum risus posuere molestie. Vestibulum ullamcorper, ipsum tempor lobortis consequat, augue turpis posuere dolor, ut elementum ligula libero et odio. Nunc mollis, magna sit amet suscipit faucibus, diam erat elementum turpis, quis tempus libero justo vel est. Duis mattis dolor ut neque venenatis scelerisque. Vivamus sodales massa in egestas volutpat. Nulla lobortis venenatis orci quis pretium. Proin non quam metus. Duis bibendum non erat a porta. Pellentesque sagittis, leo quis aliquam lacinia, urna mi vestibulum orci, nec fringilla leo turpis et mauris. Donec gravida nisl a est consequat mattis. Ut scelerisque felis nunc, ac elementum diam euismod quis. Aliquam scelerisque, tellus ut tempor congue, metus diam aliquet orci, ac laoreet sapien orci eu arcu. Ut vel ante a sapien mollis eleifend. Maecenas viverra facilisis pharetra.
+						<br />
+						<br />
+						Cras faucibus rhoncus quam, in ultricies diam. Phasellus malesuada cursus odio, sed rhoncus nisi maximus non. Cras porttitor nulla purus, fermentum accumsan neque tincidunt id. Fusce sed tortor sem. Mauris fermentum sem eget lectus pulvinar interdum. Aenean nec nulla vel eros consectetur feugiat. Praesent vitae tempus tortor, nec ultricies risus.
+						<br />
+						<br />
+						Etiam blandit tempor nulla sit amet vehicula. Pellentesque placerat ligula nulla, ut cursus orci scelerisque nec. Pellentesque malesuada mauris lorem, eu tincidunt tellus cursus ac. Integer ut eros dictum, dapibus ipsum ut, mollis purus. Nunc imperdiet urna eget magna aliquam sodales. Vivamus congue nunc nisi, vel imperdiet purus semper in. Pellentesque maximus erat ac risus pharetra condimentum. Etiam nec nisl id augue aliquam varius. Suspendisse ut suscipit orci. Proin elementum ac elit sit amet vehicula. Nulla tellus eros, molestie ac eros vel, malesuada tincidunt justo. Ut neque felis, sodales sit amet lobortis id, lobortis ut nibh. Etiam nec finibus augue, eu scelerisque lacus. In quis tristique arcu. Ut vel nulla quis nisi egestas rutrum ac vitae odio. Etiam sollicitudin sed justo eu sollicitudin.
+						<br />
+						<br />
+						Fusce ultrices dictum sagittis. Nullam in odio blandit, sodales enim at, sagittis purus. Fusce fermentum faucibus est ut vehicula. Suspendisse sed risus arcu. Donec cursus nunc a ante imperdiet varius. Donec quis egestas nulla. Proin fringilla, purus quis ultrices ultricies, nunc dui imperdiet sem, at tincidunt mi odio id justo. Sed hendrerit massa orci, sed ultrices erat accumsan vel. In sed tempus sem. Sed eu commodo dolor, vel gravida tellus. Quisque pretium, dui in sollicitudin suscipit, nulla diam feugiat mauris, ut ullamcorper orci nisl nec lorem. Suspendisse dolor turpis, feugiat ac sollicitudin eu, dapibus non arcu. Maecenas pulvinar et leo sed varius. Praesent at magna erat. Ut felis mauris, eleifend at dictum et, ultrices mattis odio.
+						<br />
+						<br />
+						Donec fringilla pharetra neque, ut hendrerit mauris dapibus vel. Phasellus eu nunc lobortis, aliquet dolor nec, vulputate nisi. Sed vitae dapibus risus. Nullam semper euismod purus, eu condimentum velit iaculis quis. Etiam nec nulla eget orci tincidunt auctor a vel purus. Aliquam tempus tristique augue, nec blandit est lobortis sed. In sodales pretium metus sed hendrerit.
+						<br />
+						<br />
+						Fusce semper vel metus in mollis. Ut sed nibh eget ipsum bibendum congue. Nulla quis sapien vitae velit ultricies rutrum. Cras ut libero ornare erat semper semper. Cras rhoncus dictum eleifend. Vivamus eget leo sed sapien interdum venenatis quis quis ipsum. Phasellus tincidunt fringilla mauris, sit amet bibendum lectus maximus non. Quisque ac erat vulputate, rutrum dui at, porttitor arcu. Suspendisse pulvinar, tortor sit amet sodales fringilla, dui tortor sollicitudin ligula, fermentum facilisis risus nunc id nibh. Sed risus nisl, finibus non felis in, suscipit luctus nunc. Nunc at elit maximus, pulvinar lorem quis, posuere lacus.
+						<br />
+						<br />
+						Vestibulum condimentum egestas mi. Suspendisse potenti. Vestibulum lobortis ante sed aliquet posuere. Vestibulum congue dui vitae dictum bibendum. Nam consequat quam a sem rhoncus suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel pellentesque ligula. Donec interdum ut nisl nec sodales. Maecenas pharetra molestie quam, eu posuere neque varius et.
+						<br />
+						<br />
+						Morbi eget sapien commodo, pretium enim vitae, semper turpis. Pellentesque quis turpis magna. Suspendisse arcu purus, placerat non venenatis vulputate, facilisis eget tortor. Curabitur a fermentum odio, nec aliquam ipsum. Morbi in leo venenatis, feugiat sapien eu, luctus ante. Nullam lobortis blandit velit sit amet imperdiet. Nullam imperdiet velit id erat bibendum, blandit eleifend dui tincidunt. Duis viverra mattis est ac faucibus. Nullam bibendum turpis quis lacinia tempus. Pellentesque tincidunt erat vel nisl imperdiet varius. Cras ornare, lectus quis placerat feugiat, elit ligula lobortis libero, in tincidunt dui augue at lorem. Integer odio ex, molestie eu pulvinar ac, sollicitudin quis nisi. Integer in mattis ante. Nam dolor nibh, placerat nec tortor eget, mollis fringilla ipsum. Phasellus vel odio magna. Vivamus non commodo urna, vitae facilisis sem.
+						<br />
+						<br />
+						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu faucibus magna, ac auctor elit. Integer ac mauris pretium, dictum purus vitae, luctus ipsum. Cras vel ante vestibulum, ullamcorper libero porttitor, auctor dui. Ut pellentesque porta tortor, nec venenatis mauris posuere et. Nullam volutpat efficitur metus ac fringilla. Quisque vitae tincidunt leo, ut scelerisque erat. Etiam semper est sed mauris molestie, iaculis pharetra magna hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed pretium urna tellus, vel aliquam elit tempus id. Proin ultrices placerat nibh, eget laoreet tellus iaculis et. Mauris fringilla nisi eget neque rhoncus fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis eu scelerisque sapien. In hac habitasse platea dictumst.
+						<br />
+						<br />
+						Proin purus massa, imperdiet at gravida eget, varius ultricies elit. Nunc fringilla mi lorem, ac porta tortor posuere quis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec turpis lacus, interdum non tempor quis, faucibus euismod nunc. Vestibulum euismod nisl ac facilisis ornare. Vivamus ante sapien, venenatis nec placerat vel, tristique vel sapien. Nullam varius erat eu consectetur suscipit. Praesent at semper erat. Fusce fermentum rhoncus lorem at venenatis. Sed maximus pulvinar est, id elementum ex dignissim vel. Duis eu accumsan erat, id imperdiet justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget venenatis ex, at hendrerit nisi. Etiam ante quam, porttitor quis tincidunt et, euismod id enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquam rhoncus risus, in semper nibh posuere quis.
+					</div>
+				</article>
+				<article class="inner-content" id="contactMeContent">
+				</article>
+			</section>
 		</div>
+		<script>
+			$(document).ready(function() {
+				$('.header-button').click(function(e) {
+					header_button_click(e.target);
+				});
+			});
+		</script>
 	</body>
 <html>

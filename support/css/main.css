@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 @import url(http://fonts.googleapis.com/css?family=Lato);
 
+html {
+	font-size: 14px;
+}
+
 body {
 	background-color: #25a0da;
 	margin: 0px;
@@ -10,9 +14,21 @@ body {
 	background-image: url('../imgs/bedge-grunge.png');
 }
 
-.bodyDiv {
-	margin-left: 10%;
-	margin-right: 10%
+input:focus, select:focus, textarea:focus, button:focus {
+	outline: none;
+}
+
+.container, .header, .header-text, .header-sub-text,
+.header-button-container, .header-button, .content {
+	display: flex;
+}
+
+.container, .header, .content {
+	flex-direction: column;
+}
+
+.container {
+	margin: 0 auto;
 	padding: 10px;
 	width: 80%;
 	height: 100vh;
@@ -24,7 +40,7 @@ body {
 	transition: 0.3s;
 }
 
-.mainPageHeader {
+.header {
 	position: relative;
 	width: 100%;
 	height: 275px;
@@ -34,89 +50,60 @@ body {
 	background-repeat: no-repeat;
 }
 
-.mainHeaderText {
-	height: 40%;
+.header-text {
+	height: 110px;
+	padding-left: 15%;
+	padding-top: 5px;
 	color: #25a0da;
 	font-size: 64px;
 	font-weight: 700;
-	/*transform: skewX(15deg);*/
 }
 
-.mainHeaderSubText {
-	height: 40%;
+.header-sub-text {
+	height: 100px;
+	padding-left: 50%;
 	font-size: 48px;
 	font-weight: 600;
-	/*transform: skewX(-15deg);*/
 }
 
-.headerButtons {
+.header-button-container {
+	flex-direction: row;
 	width: auto;
-	padding-left: 20px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 10px;
+	padding: 5px 20px;
 	background-color: rgba(214, 214, 214, 0.5);
 	transition: 0.3s;
 }
 
-.headerButtons:hover {
+.header-button-container:hover {
 	background-color: rgba(214, 214, 214, 1);
 }
 
-.headerButton {
-	padding-left: 20px;
-	padding-top: 5px;
-	padding-right: 20px;
-	padding-bottom: 5px;
-	width: calc(20% - 50px);
-	height: 100%;
+.header-button {
+	flex: 1;
+	padding: 10px 20px 5px 20px;
+	box-sizing: border-box;
 	text-align: center;
 	background-color: #25a0da;
 	color: #fff;
 	cursor: pointer;
 	border: 1px solid #25a0da;
-	font-size: 20px;
+	font-size: 1.071429rem;
 	z-index: 1;
-	margin-top: 10px;
+	margin: 10px;
 }
 
-.sectionButtonContainer {
+.section-button-container {
 	position: relative;
-	height: 55px;
 }
 
-#home {
-	left: 0px;
-}
-
-#resume {
-	left: 20%;
-}
-
-#myWork {
-	left: 40%;
-}
-
-#aboutMe {
-	left: 60%;
-}
-
-#contactMe {
-	left: 80%;
-}
-
-.contentDiv {
-	padding: 10px;
-	height: calc(100vh - 275px);
-	max-height: calc(100vh - 275px);
-	overflow-x: hidden;
-	overflow-y: hidden;
+.content {
 	font-family: 'Lato', sans-serif;
+	overflow: hidden;
+	box-sizing: border-box;
+	height: 100%;
 }
 
-.innerContentDiv {
-	margin-top: 100px;
-	margin-bottom: 100px;
+.inner-content {
 	min-height: 100%;
 	max-height: 100%;
 	overflow-x: hidden;
@@ -138,6 +125,7 @@ body {
 	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
 }
+
 .hvr-sweep-to-bottom:before {
 	content: "";
 	position: absolute;
@@ -158,15 +146,19 @@ body {
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
 }
-.hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
+.hvr-sweep-to-bottom:hover,
+.hvr-sweep-to-bottom:focus,
+.active {
 	color: #25a0da;
 }
-.hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
+.hvr-sweep-to-bottom:hover:before,
+.hvr-sweep-to-bottom:focus:before,
+.active:before {
 	-webkit-transform: scaleY(1);
 	transform: scaleY(1);
 }
 
-.resumeSectionHeader {
+.resume-section-header {
 	background-color: #25a0da;
 	color: #fff;
 	padding: 4px;
@@ -177,11 +169,11 @@ body {
 	border: 1px solid #25a0da;
 }
 
-.resumeSectionHeader:hover {
+.resume-section-header:hover {
 	background-color: #fff;
 	color: #25a0da;
 }
 
-.resumeSectionContent {
-	
+.resume-section-content {
+
 }
