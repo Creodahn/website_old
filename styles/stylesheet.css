@@ -33,6 +33,9 @@ a {
 .content-section {
   position: relative;
   text-align: center;
+}
+
+.content-section:nth-child(odd) {
   box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -152,7 +155,7 @@ nav.position {
 .name h1 {
   font-size: 4rem;
   font-weight: bold;
-  margin: 0 auto;
+  margin: 0;
   padding: 20px;
   align-self: flex-end;
   border-bottom: 2px inset #e8b71a;
@@ -221,6 +224,7 @@ nav.position {
   -webkit-margin-after: 0;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
+  margin: 0;
 }
 
 /*Breakpoint is 1100px*/
@@ -371,10 +375,13 @@ nav.position {
 }
 
 /*Photo Stack*/
-.photo-stack, .photo-stack:after, .photo-stack:before {
-  border: 6px solid #fff;
+.photo-stack, .photo-stack:after, .photo-stack:before,
+.photo-stack img {
   height: 200px;
   width: 200px;
+}
+.photo-stack, .photo-stack:after, .photo-stack:before {
+  border: 6px solid #fff;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
   cursor: pointer;
@@ -403,10 +410,10 @@ nav.position {
  transform: rotate(-7deg);
 }
 
-.photo-stack img {
-  height: auto%;
+/*.photo-stack img {
+  height: auto;
   width: auto;
-}
+}*/
 
 .photo-stack:after, .photo-stack:before {
   position: absolute;
