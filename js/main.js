@@ -53,13 +53,14 @@ $(document).ready(function() {
 
   $('.photo-stack').click(function(e) {
     var img = $(e.target).closest('img').attr('src');
-
+    $('main').addClass('de-emphasize');
     $('.photo-modal').css('background-image', 'url(\'' + img + '\')');
-    $('.photo-modal').css('display', 'block');
+    $('.modal-background').removeClass('hidden');
   });
 
   $('.close-button').click(function(e) {
-    $(e.target).parent().css('display', 'none');
+    $(e.target).parent().addClass('hidden');
+    $('main').removeClass('de-emphasize');
   });
 
   if(window.location.hash.length > 0) {
