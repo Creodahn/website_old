@@ -9,12 +9,12 @@
 /*General Layout*/
 html {
   background-color: #faf8f2;
+  font-size: 16px;
 }
 
 body {
   background-color: transparent;
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
   margin: 0;
 }
 
@@ -29,6 +29,10 @@ main {
 main.de-emphasize {
   -webkit-filter: blur(5px);
   filter: blur(5px);
+}
+
+section {
+  font-size: 1rem;
 }
 
 .content-section, .name, .title {
@@ -160,28 +164,55 @@ nav.position {
   width: 70%;
   margin: 0 auto;
   text-align: center;
+  color: #fff;
   /*text-shadow: 0px 2px 4px #e8b71a;*/
   /*color: #fff;*/
   /*text-shadow: 0px 2px 4px #000;*/
   /*text-shadow: 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000;*/
 }
 
-.name {
-  padding: 20px;
-}
-
 .name h1 {
   font-size: 4rem;
+  align-self: flex-end;
+  /*border-bottom: 2px inset #e8b71a;*/
+  background: linear-gradient(#e8b71a, #e8b71a) no-repeat;
+  background-size: 100% 2px;
+  background-position: bottom;
+}
+
+.title h3 {
+  font-size: 1.5rem;
+  align-self: flex-start;
+}
+
+.name h1, .title h3 {
   font-weight: bold;
   margin: 0;
   padding: 20px;
-  align-self: flex-end;
-  border-bottom: 2px inset #e8b71a;
   box-sizing: border-box;
 }
 
-.title {
-  font-size: 1.5rem;
+.name svg, .title svg {
+  display: block;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.name use, .title use {
+  stroke: #000;
+  stroke-linejoin: round;
+}
+
+.name use {
+  stroke-width: 6;
+}
+
+.title use {
+  stroke-width: 3;
+}
+
+.name text, .title text {
+  fill: currentColor;
 }
 
 .scroll-arrow {
@@ -332,6 +363,7 @@ nav.position {
   flex: 1;
   justify-content: center;
   text-align: left;
+  font-size: 1rem;
 }
 
 .education-label {
